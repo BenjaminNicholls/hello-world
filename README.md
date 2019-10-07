@@ -1,4 +1,4 @@
-# hello-world
-This is the First repository of many I will be creating
+# Helpful things
+___
 
-A little bit about myself. Coding is scary and I am gonna get better at it!
+A repo full of helpful things that I may or may not need for work....
