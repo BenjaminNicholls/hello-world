@@ -1,0 +1,27 @@
+#postgres example including postgres admin
+version: '3.1'
+
+services:
+  myPGDB:
+    image: postgres
+    restart: always
+    ports:
+    - "8000:5432"
+    environment:
+      POSTGRES_USER: ben
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: myPGDB
+    volumes:
+      - ~/Projects/postgres/volumes/data:/var/lib/postgresql/data
+
+
+  postgresAdmin:
+    image: dpage/pgadmin4
+    network_mode: host
+    # ports:
+    #  - "8001:1234"
+    restart: always
+    environment:
+      PGADMIN_LISTEN_PORT: "1234"
+      PGADMIN_DEFAULT_EMAIL: user@domain.com
+      PGADMIN_DEFAULT_PASSWORD: pgadmin
